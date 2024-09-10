@@ -125,17 +125,78 @@ nav ul li a {
     text-align: center;
 }
 /* Estilos para el slider */
+/* Estilos para el slider */
 .slider {
-    max-width: 800px; /* Ancho máximo del slider */
-    margin: 0 auto; /* Centra el slider */
+    max-width: 800px; /* Ancho máximo del slider (ajustado para ser más pequeño) */
+    margin: 20px auto; /* Centra el slider y agrega margen superior e inferior */
+    position: relative; /* Necesario para la posición de los botones y los indicadores */
+    overflow: hidden; /* Oculta las partes de la imagen que están fuera del contenedor */
+}
+
+.slider .slides {
+    display: flex; /* Muestra las imágenes en una fila */
+    transition: transform 0.5s ease; /* Transición suave para el cambio de diapositivas */
+}
+
+.slider .slide {
+    flex: 0 0 100%; /* Cada diapositiva ocupa el 100% del ancho del slider */
+    box-sizing: border-box; /* Incluye el relleno y el borde en el tamaño total */
 }
 
 .slider .slide img {
-    width: 50%; /* Ajusta el ancho al 100% del contenedor */
+    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor de la diapositiva */
     height: auto; /* Mantiene la proporción original de la imagen */
-    max-height: 300px; /* Limita la altura máxima del slider */
+    max-height: 400px; /* Limita la altura máxima de las imágenes en el slider */
     object-fit: cover; /* Cubre el área del contenedor sin distorsionar la imagen */
 }
+
+/* Estilos para los botones de navegación */
+.navigation {
+    position: absolute; /* Posiciona los botones sobre el slider */
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Coloca los botones en los extremos */
+    transform: translateY(-50%); /* Centra verticalmente los botones */
+}
+
+.prev-btn, .next-btn {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    color: #fff; /* Color del texto blanco */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%; /* Botones redondeados */
+    font-size: 24px; /* Tamaño del ícono */
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro al pasar el mouse */
+}
+
+/* Estilos para los indicadores de diapositivas */
+.indicators {
+    position: absolute; /* Posiciona los indicadores sobre el slider */
+    bottom: 10px; /* Espacio desde el fondo del slider */
+    left: 50%;
+    transform: translateX(-50%); /* Centra los indicadores horizontalmente */
+    display: flex;
+}
+
+.indicator {
+    width: 10px; /* Tamaño del indicador */
+    height: 10px; /* Tamaño del indicador */
+    background-color: #bbb; /* Color de los indicadores inactivos */
+    border-radius: 50%; /* Indicadores redondeados */
+    margin: 0 5px; /* Espacio entre indicadores */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave para el color de los indicadores */
+}
+
+.indicator.active {
+    background-color: #333; /* Color de los indicadores activos */
+}
+
 
 /* Estilos para las imágenes en las tarjetas */
 .card {
