@@ -1,16 +1,100 @@
 /* styles.css */
+/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Color de fondo claro para la página */
+    color: #333; /* Color del texto oscuro para un buen contraste */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 1em;
+/* Estilos para el menú de navegación */
+nav {
+    background-color: #4a90e2; /* Color de fondo azul claro para el menú */
+    padding: 10px 20px; /* Espacio interno del menú */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para el menú */
 }
+
+nav ul {
+    list-style: none; /* Quita los puntos de la lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Muestra los elementos en una fila */
+    justify-content: center; /* Centra los elementos en el menú */
+}
+
+nav ul li {
+    margin: 0 15px; /* Espacio entre los elementos del menú */
+}
+
+nav ul li a {
+    color: #ffffff; /* Color blanco para el texto del enlace */
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    font-size: 18px; /* Tamaño de la fuente */
+    padding: 8px 12px; /* Espacio interno en los enlaces */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave para los cambios de color */
+    border-radius: 4px; /* Bordes redondeados opcional */
+}
+
+nav ul li a:hover {
+    background-color: #357abd; /* Color de fondo azul más oscuro al pasar el mouse */
+    color: #eaf0f8; /* Color del texto al pasar el mouse */
+}
+
+/* Estilos para el encabezado */
+.header .hero {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff; /* Fondo blanco para el área del encabezado */
+    border-bottom: 2px solid #e4e4e4; /* Línea inferior sutil */
+}
+
+.header .hero h1 {
+    margin: 0;
+    font-size: 36px;
+    color: #333; /* Color del texto del título */
+}
+
+.header .hero p {
+    font-size: 20px;
+    color: #666; /* Color gris claro para el subtítulo */
+}
+
+/* Estilos para las tarjetas */
+.card {
+    background-color: #ffffff; /* Fondo blanco para las tarjetas */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin: 20px;
+    padding: 20px;
+    max-width: 300px; /* Ancho máximo para cada tarjeta */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Levanta la tarjeta al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el mouse */
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #4a90e2; /* Color de fondo azul claro */
+    color: #ffffff; /* Color blanco para el texto */
+    text-align: center;
+    padding: 15px;
+    border-top: 2px solid #e4e4e4; /* Línea superior sutil */
+}
+
 
 nav ul {
     list-style: none;
@@ -42,14 +126,14 @@ nav ul li a {
 }
 /* Estilos para el slider */
 .slider {
-    max-width: 1200px; /* Ancho máximo del slider */
+    max-width: 800px; /* Ancho máximo del slider */
     margin: 0 auto; /* Centra el slider */
 }
 
 .slider .slide img {
     width: 100%; /* Ajusta el ancho al 100% del contenedor */
     height: auto; /* Mantiene la proporción original de la imagen */
-    max-height: 500px; /* Limita la altura máxima del slider */
+    max-height: 300px; /* Limita la altura máxima del slider */
     object-fit: cover; /* Cubre el área del contenedor sin distorsionar la imagen */
 }
 
