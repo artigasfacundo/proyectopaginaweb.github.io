@@ -72,6 +72,77 @@ nav ul li a:hover {
     max-width: 300px; /* Ancho máximo para cada tarjeta */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para el efecto hover */
 }
+/* Estilos para el slider */
+.slider {
+    max-width: 800px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider .slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slider .slide {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+}
+
+.slider .slide img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+/* Estilos para los botones de navegación */
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.prev-btn, .next-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 24px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilos para los indicadores de diapositivas */
+.indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+    background-color: #333;
+}
 
 .card img {
     width: 100%;
