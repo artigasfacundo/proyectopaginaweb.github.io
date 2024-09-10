@@ -69,3 +69,52 @@ footer {
 <header style="background-color: #333; color: white; padding: 1em;">
     <h1>Descubre Argentina</h1>
 </header>
+/* Estilos para las imágenes en el slider */
+.slider {
+    max-width: 1200px; /* Ajusta el ancho máximo del slider */
+    margin: 0 auto; /* Centra el slider */
+}
+
+.slider .slide img {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    max-height: 500px; /* Opcional: limita la altura máxima del slider */
+}
+
+/* Estilos para las imágenes en las tarjetas */
+.card {
+    max-width: 300px; /* Ancho máximo para cada tarjeta */
+    margin: 20px; /* Espacio alrededor de cada tarjeta */
+    padding: 10px; /* Espacio interno en la tarjeta */
+    border: 1px solid #ddd; /* Borde opcional para las tarjetas */
+    border-radius: 8px; /* Bordes redondeados opcional */
+}
+
+.card img {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor de la tarjeta */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    max-height: 200px; /* Limita la altura máxima de las imágenes en las tarjetas */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+    border-radius: 8px; /* Bordes redondeados opcional para las imágenes */
+}
+
+/* Estilos generales para la página */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.header, .section {
+    padding: 20px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.grid .card {
+    flex: 1 1 calc(33.333% - 20px); /* Tres tarjetas por fila, con espacio entre ellas */
+    box-sizing: border-box;
+}
