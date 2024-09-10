@@ -131,7 +131,7 @@ nav ul li a {
 }
 
 .slider .slide img {
-    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    width: 50%; /* Ajusta el ancho al 100% del contenedor */
     height: auto; /* Mantiene la proporción original de la imagen */
     max-height: 300px; /* Limita la altura máxima del slider */
     object-fit: cover; /* Cubre el área del contenedor sin distorsionar la imagen */
